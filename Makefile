@@ -38,7 +38,13 @@ tags: *.c *.h cbtcommon/*.c cbtcommon/*.h
 clean:
 	rm -f cvsps *.o cbtcommon/*.o core tags
 
-.PHONY: install clean
+clobber: clean
+	$(MAKE) -C test clobber
+
+test: cvsps
+	$(MAKE) -C test
+
+.PHONY: install clean test
 # DO NOT DELETE
 
 cache.o: ./cbtcommon/hash.h ./cbtcommon/list.h ./cbtcommon/inline.h
