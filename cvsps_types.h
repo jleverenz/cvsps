@@ -10,7 +10,7 @@
 
 #define LOG_STR_MAX 65536
 #define AUTH_STR_MAX 64
-#define REV_STR_MAX 64
+#define REV_STR_MAX BUFSIZ
 #define MIN(a, b) ((a) < (b) ? (a) : (b))
 #define MAX(a, b) ((a) > (b) ? (a) : (b))
 

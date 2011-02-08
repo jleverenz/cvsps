@@ -34,13 +34,7 @@ cvs co wd
 
     cvs tag -c tag2
 
-    echo "A test of a long tag" >> tag-testing
-
-    cvs commit -m "Updated"
-
-    cvs tag -c very_long_tag_name_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-
+    # Make a very wide version history
     for i in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16; do
         cvs tag -b branch$i
         cvs up -Pd -r branch$i
